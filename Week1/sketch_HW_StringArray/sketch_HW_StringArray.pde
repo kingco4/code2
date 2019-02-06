@@ -1,5 +1,5 @@
 int xPos, yPos, size; 
-String [] words = {"dots", "spiders", "snakes", "goblins"};
+String [] words = {"grapes", "cherries", "pie", "goblins"};
 
 void setup() {
   size(600, 600);

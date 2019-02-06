@@ -1,7 +1,6 @@
 float angle = 0.0;
 float incr = 0.02;
 float scalr;
-boolean mouseClicked;
 
 
 void setup(){
