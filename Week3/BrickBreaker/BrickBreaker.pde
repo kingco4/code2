@@ -42,7 +42,7 @@ void setup(){
 void draw(){
   background(0); 
   timer();
-  Lives();
+  
   
   b.move(); 
   b.display();
@@ -78,7 +78,8 @@ void draw(){
             // checking to see if ball is within the boundaries of our bricks 
       if(b.pos.x<= (myBricks[i][j].x + myBricks[i][j].w/2) && b.pos.x>= (myBricks[i][j].x - myBricks[i][j].w/2) 
         && b.pos.y<= (myBricks[i][j].y + myBricks[i][j].h/2) && b.pos.y>= (myBricks[i][j].y - myBricks[i][j].h/2)){
-         myBricks[i][j].o = 0;  //just changing the opacity here but you can figure out how to remove the object using an array list 
+         myBricks[i][j].o = 0; //just changing the opacity here but you can figure out how to remove the object using an array list 
+         score += 10;
       }
     }
   }
@@ -93,6 +94,11 @@ void draw(){
       }
     }
   }
+  //Lives();
+  //Score();
+  text("Score: " + score, 170, 470);
+  text("Lives: " + lives, 350, 470);
+  
 }
 
 void keyPressed(){
@@ -110,13 +116,14 @@ void timer(){
   
 }
 
-void Score(){
+//void Score(){
   
+//  text("Score: " + score, 170, 470);
   
-}
+//}
 
 
-void Lives(){
-  text("Lives: " + lives, 350, 470);
+//void Lives(){
+//  text("Lives: " + lives, 350, 470);
   
-}
+//}
