@@ -127,3 +127,6 @@ void timer(){
 //  text("Lives: " + lives, 350, 470);
   
 //}
+
+//for timer resource I used: https://www.openprocessing.org/sketch/78610/
+//for help with scored and lives: https://www.openprocessing.org/sketch/134612/
