@@ -11,6 +11,7 @@ int restartSecs = 0;
 int restartMins = 0;
 float score = 0;
 float lives = 4;
+boolean collide = false;
 
 
 Ball b; 
@@ -78,6 +79,13 @@ void draw(){
             // checking to see if ball is within the boundaries of our bricks 
       if(b.pos.x<= (myBricks[i][j].x + myBricks[i][j].w/2) && b.pos.x>= (myBricks[i][j].x - myBricks[i][j].w/2) 
         && b.pos.y<= (myBricks[i][j].y + myBricks[i][j].h/2) && b.pos.y>= (myBricks[i][j].y - myBricks[i][j].h/2)){
+          //https://processing.org/reference/continue.html reference 
+          //help from a friend in Bryans Class, Isabela
+          if (myBricks[i][j].o == 0) continue;
+          myBricks[i][j].o = 0;
+          collide = true;
+          score += 10;
+          
         
       }
     }
