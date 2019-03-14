@@ -44,7 +44,7 @@ void keyPressed(){
   } else{
     mv = 0;
   }
-    
+  
   }
 
 void harc(){
@@ -73,11 +73,4 @@ void harc(){
    translate(100, 0);
    triangle(xpos - 50, 450, xpos - 50, 520, xpos - 50 + 30, 520);
       
-  
-}
-
-void harcsmile(){
-  
-  arc();
-  
 }

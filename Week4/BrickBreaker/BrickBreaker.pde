@@ -12,6 +12,7 @@ int restartMins = 0;
 float score = 0;
 float lives = 4;
 boolean collide = false;
+int myScores;
 
 
 Ball b; 
