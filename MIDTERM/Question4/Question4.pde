@@ -53,8 +53,7 @@ void keyPressed() {
     if (key == 'e') {
       state = 0;
     }
-  default:
-    break;
+  break;
   }
 }
 
