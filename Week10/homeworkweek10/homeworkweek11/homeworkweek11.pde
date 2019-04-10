@@ -1,27 +1,31 @@
-float y;
+float x;
 float offset;
 float noisei;
 float rain;
 float n;
 
+
+
 void setup(){
   size(500, 500);
   background(0);
+  stroke(255);
+  noFill();
 }
 
 void draw(){
   
-  if(y >= height){
-    y =0; 
+  if(x >= width){
+    x =0; 
   }
-  y++;
+  x++;
   
   offset += 0.003;
   noisei = noise(offset);
-  n = random(0, width);
-  rain = map(noisei, 0, 200, n, width);
+  n = random(0, height);
+  rain = map(noisei, 0, 200, n, height);
   
-  ellipse(rain, y, 10, 10);
+  arc(rain, x, 500, 600, 0, PI);
   
   
 }
