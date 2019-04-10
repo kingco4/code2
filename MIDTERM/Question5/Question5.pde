@@ -1,13 +1,25 @@
 float r; 
 color bgColor;
+
 String [] oldColors;
+String lastColor;
 
 void setup(){
   size(600, 600); 
   
-  oldColors = loadStrings("bgcolor.csv");
+oldColors = loadStrings("bgcolor.csv");
+  lastColor = oldColors[0];
+    for (int i = 0; i<oldColors.length; i++) {
+      if (i > i-1) {
+        lastColor = oldColors[i];
+      }
+    }
 
+  background(int(lastColor)); 
 }
+  
+
+
 
 void draw(){
   background(bgColor); 
