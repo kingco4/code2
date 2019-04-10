@@ -15,17 +15,19 @@ void setup(){
 
 void draw(){
   
+  
   if(x >= width){
     x =0; 
   }
+  
   x++;
   
-  offset += 0.003;
+  offset += 0.01;
   noisei = noise(offset);
   n = random(0, height);
   rain = map(noisei, 0, 200, n, height);
   
-  arc(rain, x, 500, 600, 0, PI);
+  arc(rain, x, 800, 700, PI, 2 * PI);
   
   
 }
